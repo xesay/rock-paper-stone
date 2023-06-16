@@ -3,14 +3,15 @@ from aiogram import Bot, Dispatcher, F
 from aiogram.filters import Command,CommandStart,Text
 from aiogram.types import Message, ContentType,ReplyKeyboardMarkup,KeyboardButton,ReplyKeyboardRemove
 from aiogram.utils.keyboard import ReplyKeyboardBuilder
+from config_data.config import load_config,Config
 
 
 
 #Токен Бота
-api: str = '6190567891:AAHREkg0RnASqvBog6QukChq_AvzLIjv2Lw'
+api: Config = load_config('env.txt')
 
 #обьекты бота и диспатчера
-bot: Bot = Bot(api)
+bot: Bot = Bot(api.tg_bot.token)
 dp: Dispatcher = Dispatcher()
 
 rules = """
