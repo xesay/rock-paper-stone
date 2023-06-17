@@ -3,8 +3,20 @@ from config_data.config import load_config,Config
 from handlers import user_handlers, other_handlers
 import asyncio
 from services import services
+import logging
+
+logger = logging.getLogger(__name__)
+
 
 async def main():
+    # Конфигурируем логирование
+    logging.basicConfig(
+        level=logging.INFO,
+        format='%(filename)s:%(lineno)d #%(levelname)-8s '
+               '[%(asctime)s] - %(name)s - %(message)s')
+
+    # Выводим в консоль информацию о начале запуска бота
+    logger.info('Starting bot')
 
     api: Config = load_config('env.txt')
     bot: Bot = Bot(api.tg_bot.token)
