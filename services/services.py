@@ -1,6 +1,8 @@
 import random
 from aiogram import Router
 from lexicon.lexicon_ru import LEXICON_RU
+
+
 router: Router = Router()
 
 

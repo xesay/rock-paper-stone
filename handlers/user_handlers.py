@@ -4,7 +4,7 @@ from aiogram.filters import Command, CommandStart, Text
 from lexicon.lexicon_ru import LEXICON_RU
 from aiogram import Router, Bot
 from services.services import get_bot_choice, get_winner
-from aiogram.types import Message,ReplyKeyboardRemove
+from aiogram.types import Message
 from keyboards.keyboards import kb,kb2
 from aiogram.filters import Command, CommandStart, Text
 from lexicon.lexicon_ru import LEXICON_RU

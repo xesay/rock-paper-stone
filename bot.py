@@ -3,7 +3,6 @@ from config_data.config import load_config,Config
 from handlers import user_handlers, other_handlers
 import asyncio
 from keyboards.set_menu import set_main_menu
-from services import services
 import logging
 
 logger = logging.getLogger(__name__)
@@ -19,7 +18,7 @@ async def main():
     # Выводим в консоль информацию о начале запуска бота
     logger.info('Starting bot')
 
-    api: Config = load_config('env.txt')
+    api: Config = load_config('.env.txt')
     bot: Bot = Bot(api.tg_bot.token)
     dp: Dispatcher = Dispatcher()
 
