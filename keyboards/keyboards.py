@@ -1,5 +1,4 @@
 from aiogram.utils.keyboard import ReplyKeyboardBuilder
-<<<<<<< HEAD
 from aiogram.types import KeyboardButton,ReplyKeyboardMarkup
 from lexicon.lexicon_ru import LEXICON_RU
 
@@ -31,7 +30,6 @@ game_kb: ReplyKeyboardMarkup = ReplyKeyboardMarkup(
                                               [button_2],
                                               [button_3]],
                                     resize_keyboard=True)
-=======
 from aiogram.types import KeyboardButton
 from lexicon.lexicon_ru import LEXICON_RU
 
@@ -45,4 +43,3 @@ kb2: ReplyKeyboardBuilder = ReplyKeyboardBuilder()
 bt_4: KeyboardButton = KeyboardButton(text=LEXICON_RU['yes_button'])
 bt_5: KeyboardButton = KeyboardButton(text=LEXICON_RU['no_button'])
 kb2.row(bt_4,bt_5)
->>>>>>> 62fb27a7bab5a1249665a58143c42832353e4909

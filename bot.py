@@ -2,14 +2,11 @@ from aiogram import Bot, Dispatcher
 from config_data.config import load_config,Config
 from handlers import user_handlers, other_handlers
 import asyncio
-<<<<<<< HEAD
 from keyboards.set_menu import set_main_menu
-=======
 from services import services
 import logging
 
 logger = logging.getLogger(__name__)
->>>>>>> 62fb27a7bab5a1249665a58143c42832353e4909
 
 
 async def main():
